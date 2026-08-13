@@ -2,8 +2,7 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
@@ -13,7 +12,10 @@ import {
   SiExpress,
   SiFirebase,
   SiJavascript,
+  SiMapbox,
+  SiMaplibre,
   SiMongodb,
+  SiOpenstreetmap,
   SiPostgresql,
   SiPrisma,
   SiPython,
@@ -222,6 +224,72 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiSupabase />,
   },
+  railRadar: {
+    title: "RailRadar",
+    bg: "black",
+    fg: "white",
+    icon: <SiMapbox />,
+  },
+  mapTiler: {
+    title: "MapTiler",
+    bg: "black",
+    fg: "white",
+    icon: <SiMapbox />,
+  },
+  mapLibre: {
+    title: "MapLibre",
+    bg: "black",
+    fg: "white",
+    icon: <SiMaplibre />,
+  },
+  openWeather: {
+    title: "OpenWeather",
+    bg: "black",
+    fg: "white",
+    icon: <SiOpenstreetmap />,
+  },
+  openTopography: {
+    title: "OpenTopography",
+    bg: "black",
+    fg: "white",
+    icon: <SiOpenstreetmap />,
+  },
+  overpass: {
+    title: "Overpass/OSM",
+    bg: "black",
+    fg: "white",
+    icon: <SiOpenstreetmap />,
+  },
+  turf: {
+    title: "Turf.js",
+    bg: "black",
+    fg: "white",
+    icon: <SiMapbox />,
+  },
+  ai: {
+    title: "AI/ML",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython />,
+  },
+  database: {
+    title: "Database",
+    bg: "black",
+    fg: "white",
+    icon: <SiPostgresql />,
+  },
+  html: {
+    title: "HTML",
+    bg: "black",
+    fg: "white",
+    icon: <SiJavascript />,
+  },
+  css: {
+    title: "CSS",
+    bg: "black",
+    fg: "white",
+    icon: <SiTailwindcss />,
+  },
 };
 export type Project = {
   id: string;
@@ -233,106 +301,149 @@ export type Project = {
   content: React.ReactNode | any;
   github?: string;
   live: string;
+  featured?: boolean;
+  features?: string[];
 };
 const projects: Project[] = [
   {
-    id: "fake-news-detection",
-    category: "Machine Learning",
-    title: "Fake News Detection System",
-    src: "/assets/projects-screenshots/logo-dark.svg",
-    screenshots: ["logo-dark.svg"],
-    skills: {
-      frontend: [],
-      backend: [PROJECT_SKILLS.python],
-    },
-    live: "https://github.com/Kishor-solanki/FAKE-NEWS-DETECTION",
-    github: "https://github.com/Kishor-solanki/FAKE-NEWS-DETECTION",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A machine learning based project that classifies news articles as
-            real or fake using text processing and classification models in
-            Python.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/logo-dark.svg`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "credit-card-fraud",
-    category: "Machine Learning",
-    title: "Credit Card Fraud Detection",
-    src: "/assets/projects-screenshots/logo-dark.svg",
-    screenshots: ["logo-dark.svg"],
-    skills: {
-      frontend: [],
-      backend: [PROJECT_SKILLS.python],
-    },
-    live: "https://github.com/Kishor-solanki/Credit-Card-Fraud-Detection",
-    github: "https://github.com/Kishor-solanki/Credit-Card-Fraud-Detection",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Detects potentially fraudulent credit card transactions using
-            machine learning models trained on transaction patterns and
-            anomalies.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/logo-dark.svg`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "food-delivery-website",
+    id: "railgaadi",
     category: "Web Development",
-    title: "Food Delivery Website",
-    src: "/assets/projects-screenshots/logo-dark.svg",
-    screenshots: ["logo-dark.svg"],
+    title: "RailGaadi — Real-Time Train Tracking & Journey Intelligence",
+    src: "/assets/projects-screenshots/railgaadi.svg",
+    screenshots: ["railgaadi.svg"],
+    featured: true,
+    features: [
+      "Live train status and location tracking",
+      "Train route visualization on interactive maps",
+      "ETA and delay information in real-time",
+      "Journey analytics and geospatial context",
+      "Weather information along the route",
+      "API/service/provider architecture with caching",
+    ],
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react],
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.mapLibre,
+        PROJECT_SKILLS.mapTiler,
+      ],
+      backend: [
+        PROJECT_SKILLS.railRadar,
+        PROJECT_SKILLS.openWeather,
+        PROJECT_SKILLS.openTopography,
+        PROJECT_SKILLS.overpass,
+        PROJECT_SKILLS.turf,
+      ],
+    },
+    live: "#",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A real-time train tracking and journey intelligence platform that
+            provides live train status, route visualization, ETA and delay
+            information, journey analytics, and weather data with interactive
+            maps and geospatial context.
+          </TypographyP>
+          <div className="mt-4 mb-4">
+            <TypographyH3 className="text-lg mb-2">Key Features</TypographyH3>
+            <ul className="list-disc list-outside ml-4 space-y-1 text-sm text-muted-foreground">
+              {this.features?.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <ProjectsLinks live={this.live} repo={undefined} />
+          <SlideShow images={[`${BASE_PATH}/railgaadi.svg`]} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "telemedicine",
+    category: "Healthcare / AI",
+    title: "AI-Integrated Telemedicine Platform — SIH Hackathon",
+    src: "/assets/projects-screenshots/telemedicine.svg",
+    screenshots: ["telemedicine.svg"],
+    features: [
+      "AI-assisted healthcare functionality",
+      "Connect patients and doctors online",
+      "Healthcare-related information and resources",
+      "Online consultation support",
+      "Hackathon development experience",
+    ],
+    skills: {
+      frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.ai],
+    },
+    live: "#",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A healthcare platform designed to connect patients and doctors and
+            provide healthcare-related information and online consultation
+            support, featuring AI-assisted healthcare functionality developed
+            during the SIH Hackathon.
+          </TypographyP>
+          <div className="mt-4 mb-4">
+            <TypographyH3 className="text-lg mb-2">Key Features</TypographyH3>
+            <ul className="list-disc list-outside ml-4 space-y-1 text-sm text-muted-foreground">
+              {this.features?.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <ProjectsLinks live={this.live} repo={undefined} />
+          <SlideShow images={[`${BASE_PATH}/telemedicine.svg`]} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "personal-portfolio",
+    category: "Web Development",
+    title: "Personal Developer Portfolio",
+    src: "/assets/projects-screenshots/portfolio-thumbnail.svg",
+    screenshots: ["portfolio-thumbnail.svg"],
+    features: [
+      "About me section",
+      "Skills showcase",
+      "Projects gallery",
+      "Education and certificates",
+      "Contact information",
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+      ],
       backend: [],
     },
-    live: "https://github.com/Kishor-solanki/quick-food-delivery-website",
-    github: "https://github.com/Kishor-solanki/quick-food-delivery-website",
+    live: "#",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            A responsive food delivery website with clean UI where users can
-            browse food items, view details, and explore the ordering flow.
+            My personal portfolio website showcasing my skills, projects,
+            education, certificates, and contact information with a modern 3D
+            design and smooth animations.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/logo-dark.svg`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "exam-seating-arrangement",
-    category: "Desktop / Utility",
-    title: "Exam Seating Arrangement",
-    src: "/assets/projects-screenshots/logo-dark.svg",
-    screenshots: ["logo-dark.svg"],
-    skills: {
-      frontend: [],
-      backend: [PROJECT_SKILLS.python],
-    },
-    live: "https://github.com/Kishor-solanki/EXAM_SEATING_ARRANGEMENT",
-    github: "https://github.com/Kishor-solanki/EXAM_SEATING_ARRANGEMENT",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A tool to automatically generate exam seating plans based on class
-            strength and constraints, reducing manual work for faculty.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/logo-dark.svg`]} />
+          <div className="mt-4 mb-4">
+            <TypographyH3 className="text-lg mb-2">Key Features</TypographyH3>
+            <ul className="list-disc list-outside ml-4 space-y-1 text-sm text-muted-foreground">
+              {this.features?.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <ProjectsLinks live={this.live} repo={undefined} />
+          <SlideShow images={[`${BASE_PATH}/portfolio-thumbnail.svg`]} />
         </div>
       );
     },

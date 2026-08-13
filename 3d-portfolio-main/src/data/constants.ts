@@ -25,6 +25,17 @@ export enum SkillNames {
   GCP = "gcp",
   VIM = "vim",
   VERCEL = "vercel",
+  C = "c",
+  CPP = "cpp",
+  PYTHON = "python",
+  DBMS = "dbms",
+  MAPLIBRE = "maplibre",
+  MAPTILER = "maptiler",
+  OPENSTREETMAP = "openstreetmap",
+  OVERPASS = "overpass",
+  TURF = "turf",
+  COMPUTER_NETWORKS = "computer-networks",
+  COMMUNICATION = "communication",
 }
 export type Skill = {
   id: number;
@@ -248,6 +259,103 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#6cc24a",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   },
+  [SkillNames.C]: {
+    id: 26,
+    name: "c",
+    label: "C",
+    shortDescription: "Foundational programming language for problem solving.",
+    color: "#555555",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  },
+  [SkillNames.CPP]: {
+    id: 27,
+    name: "cpp",
+    label: "C++",
+    shortDescription:
+      "Object-oriented programming and performance-focused development.",
+    color: "#00599c",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  },
+  [SkillNames.PYTHON]: {
+    id: 28,
+    name: "python",
+    label: "Python",
+    shortDescription:
+      "Used for ML projects, automation, and backend development.",
+    color: "#3776ab",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  [SkillNames.DBMS]: {
+    id: 29,
+    name: "dbms",
+    label: "DBMS",
+    shortDescription:
+      "Database management, SQL queries, and data modeling.",
+    color: "#336791",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  [SkillNames.MAPLIBRE]: {
+    id: 30,
+    name: "maplibre",
+    label: "MapLibre",
+    shortDescription:
+      "Open-source mapping library for interactive map visualizations.",
+    color: "#38bdf8",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  },
+  [SkillNames.MAPTILER]: {
+    id: 31,
+    name: "maptiler",
+    label: "MapTiler",
+    shortDescription:
+      "Custom map tiles and geospatial data for interactive applications.",
+    color: "#4ba3c7",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  },
+  [SkillNames.OPENSTREETMAP]: {
+    id: 32,
+    name: "openstreetmap",
+    label: "OpenStreetMap",
+    shortDescription: "Open collaborative map data for geospatial projects.",
+    color: "#7ebc6f",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  },
+  [SkillNames.OVERPASS]: {
+    id: 33,
+    name: "overpass",
+    label: "Overpass API",
+    shortDescription:
+      "Query language and API for extracting OpenStreetMap data.",
+    color: "#404040",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  },
+  [SkillNames.TURF]: {
+    id: 34,
+    name: "turf",
+    label: "Turf.js",
+    shortDescription:
+      "Geospatial analysis library for spatial operations and calculations.",
+    color: "#20b2aa",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  },
+  [SkillNames.COMPUTER_NETWORKS]: {
+    id: 35,
+    name: "computer-networks",
+    label: "Computer Networks",
+    shortDescription:
+      "Networking fundamentals, protocols, and system communication.",
+    color: "#2563eb",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/networkx/networkx-original.svg",
+  },
+  [SkillNames.COMMUNICATION]: {
+    id: 36,
+    name: "communication",
+    label: "Communication Systems",
+    shortDescription:
+      "Core ECE concepts in signal processing and communication.",
+    color: "#7c3aed",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg",
+  },
 };
 
 export type Experience = {
@@ -263,29 +371,45 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "2023",
-    endDate: "Present",
+    startDate: "2021",
+    endDate: "2025",
     title: "B.Tech, Electronics and Communication Engineering",
     company: "Arya College of Engineering and IT",
     description: [
-      "Pursuing a strong foundation in core engineering subjects along with programming and problem solving.",
+      "Final-year ECE student with a CGPA of 8.0, building a strong foundation in core engineering subjects along with programming and problem solving.",
       "Actively practicing Data Structures and Algorithms (DSA) to improve logical thinking and coding efficiency.",
-      "Building projects in web development and machine learning to apply concepts beyond the classroom.",
+      "Developing projects in web development, real-time systems, AI-integrated applications, and machine learning to apply concepts beyond the classroom.",
+      "Proficient in modern web technologies including React, Next.js, TypeScript, and geospatial tools like MapTiler and MapLibre.",
     ],
     skills: [
+      SkillNames.C,
+      SkillNames.CPP,
+      SkillNames.PYTHON,
       SkillNames.JS,
+      SkillNames.TS,
       SkillNames.HTML,
       SkillNames.CSS,
+      SkillNames.REACT,
+      SkillNames.NEXTJS,
+      SkillNames.TAILWIND,
+      SkillNames.POSTGRES,
+      SkillNames.DBMS,
+      SkillNames.MAPLIBRE,
+      SkillNames.MAPTILER,
+      SkillNames.OPENSTREETMAP,
+      SkillNames.OVERPASS,
+      SkillNames.TURF,
+      SkillNames.COMPUTER_NETWORKS,
+      SkillNames.COMMUNICATION,
       SkillNames.GIT,
       SkillNames.GITHUB,
-      SkillNames.NPM,
     ],
   },
   {
     id: 2,
     startDate: "2025",
     endDate: "2025",
-    title: "Hackathon Participant – UEM Hackathon",
+    title: "UEM Hackathon Participant",
     company: "UEM Hackathon",
     description: [
       "Participated in a team-based hackathon competition focused on solving real-world problems.",
@@ -299,6 +423,18 @@ export const EXPERIENCE: Experience[] = [
       SkillNames.GIT,
       SkillNames.GITHUB,
     ],
+  },
+  {
+    id: 3,
+    startDate: "2025",
+    endDate: "2025",
+    title: "TCS iON Career Edge – Young Professional",
+    company: "TCS iON",
+    description: [
+      "Completed professional development training covering professional communication, interview preparation, IT fundamentals, AI awareness, and professional skills.",
+      "Certified in June 2025 to strengthen workplace readiness and soft skills.",
+    ],
+    skills: [],
   },
 ];
 

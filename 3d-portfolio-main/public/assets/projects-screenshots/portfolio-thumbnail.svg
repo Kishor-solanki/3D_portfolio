@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="533" viewBox="0 0 800 533">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="533" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="80" fill="#f97316"/>
+    <circle cx="700" cy="450" r="100" fill="#ff6b6b"/>
+  </g>
+
+  <!-- Top header -->
+  <rect x="0" y="0" width="800" height="60" fill="#0f172a" opacity="0.9"/>
+  <rect x="0" y="58" width="800" height="2" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- Logo -->
+  <g transform="translate(30, 15)">
+    <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#accent)"/>
+    <text x="16" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">K</text>
+  </g>
+  <text x="75" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff">Developer Portfolio</text>
+  <text x="75" y="50" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Personal Portfolio Website</text>
+
+  <!-- Status pill -->
+  <g transform="translate(620, 18)">
+    <rect x="0" y="0" width="150" height="28" rx="14" fill="#f97316" opacity="0.15"/>
+    <circle cx="16" cy="14" r="5" fill="#f97316"/>
+    <text x="28" y="18" font-family="Arial, sans-serif" font-size="11" fill="#f97316">● Live</text>
+  </g>
+
+  <!-- Main hero section preview -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="80" width="460" height="250" rx="12" fill="url(#cardBg)" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Hero text -->
+    <text x="60" y="120" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Hi, I am</text>
+    <text x="60" y="160" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#fff">Kishor Solanki</text>
+    <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">A Full Stack Web Developer</text>
+    
+    <!-- Buttons -->
+    <g transform="translate(60, 220)">
+      <rect x="0" y="0" width="100" height="35" rx="6" fill="url(#accent)"/>
+      <text x="20" y="23" font-family="Arial, sans-serif" font-size="11" fill="#fff">Resume</text>
+    </g>
+    <g transform="translate(170, 220)">
+      <rect x="0" y="0" width="100" height="35" rx="6" fill="none" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="23" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">Hire Me</text>
+    </g>
+    
+    <!-- Social icons -->
+    <g transform="translate(60, 275)">
+      <circle cx="10" cy="10" r="10" fill="#334155"/>
+      <text x="10" y="14" font-family="Arial, sans-serif" font-size="9" fill="#fff" text-anchor="middle">X</text>
+    </g>
+    <g transform="translate(90, 275)">
+      <circle cx="10" cy="10" r="10" fill="#334155"/>
+      <text x="10" y="14" font-family="Arial, sans-serif" font-size="9" fill="#fff" text-anchor="middle">GH</text>
+    </g>
+    <g transform="translate(120, 275)">
+      <circle cx="10" cy="10" r="10" fill="#334155"/>
+      <text x="10" y="14" font-family="Arial, sans-serif" font-size="9" fill="#fff" text-anchor="middle">in</text>
+    </g>
+  </g>
+
+  <!-- Sections preview card -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="80" width="240" height="250" rx="12" fill="url(#cardBg)" stroke="#334155" stroke-width="1"/>
+    <text x="540" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0">Sections</text>
+    
+    <!-- Section items -->
+    <g transform="translate(540, 130)">
+      <rect x="0" y="0" width="200" height="30" rx="6" fill="#334155"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">● About</text>
+    </g>
+    <g transform="translate(540, 170)">
+      <rect x="0" y="0" width="200" height="30" rx="6" fill="#334155"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">● Skills</text>
+    </g>
+    <g transform="translate(540, 210)">
+      <rect x="0" y="0" width="200" height="30" rx="6" fill="#334155"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">● Projects</text>
+    </g>
+    <g transform="translate(540, 250)">
+      <rect x="0" y="0" width="200" height="30" rx="6" fill="#334155"/>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">● Contact</text>
+    </g>
+  </g>
+
+  <!-- Bottom stats row -->
+  <g transform="translate(40, 360)">
+    <rect x="0" y="0" width="220" height="80" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Tech Stack</text>
+    <text x="15" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Next.js</text>
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="10" fill="#f97316">React · TypeScript</text>
+  </g>
+  <g transform="translate(280, 360)">
+    <rect x="0" y="0" width="220" height="80" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Design</text>
+    <text x="15" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">3D + Modern</text>
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="10" fill="#f97316">Tailwind · Framer</text>
+  </g>
+  <g transform="translate(520, 360)">
+    <rect x="0" y="0" width="240" height="80" rx="10" fill="url(#cardBg)" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Features</text>
+    <text x="15" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Responsive</text>
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="10" fill="#f97316">Dark/Light · Animations</text>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="520" width="800" height="13" fill="url(#accent)" opacity="0.8"/>
+</svg>
