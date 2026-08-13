@@ -183,24 +183,24 @@ const ProjectLinks = ({ project }: { project: Project }) => {
   return (
     <>
       {project.github && (
-        <Link href={project.github} target="_blank" rel="noopener">
-          <Button variant="outline" size="sm" className="gap-1.5">
+        <Button asChild variant="outline" size="sm" className="gap-1.5">
+          <Link href={project.github} target="_blank" rel="noopener">
             <Github className="w-3.5 h-3.5" />
             Code
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       )}
       {project.live && project.live !== "#" && (
-        <Link href={project.live} target="_blank" rel="noopener">
-          <Button size="sm" className="gap-1.5">
+        <Button asChild size="sm" className="gap-1.5">
+          <Link href={project.live} target="_blank" rel="noopener">
             <ExternalLink className="w-3.5 h-3.5" />
             Live
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       )}
       <Modal>
-        <ModalTrigger className="px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden p-0 bg-transparent hover:bg-transparent">
-          <Button variant="ghost" size="sm" className="gap-1.5">
+        <ModalTrigger asChild>
+          <Button variant="ghost" size="sm" className="gap-1.5 text-black dark:text-white">
             <Eye className="w-3.5 h-3.5" />
             Details
           </Button>
@@ -216,11 +216,11 @@ const ProjectLinks = ({ project }: { project: Project }) => {
               Cancel
             </button>
             {project.live !== "#" && (
-              <Link href={project.live} target="_blank">
-                <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+              <Button asChild className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+                <Link href={project.live} target="_blank">
                   Visit
-                </button>
-              </Link>
+                </Link>
+              </Button>
             )}
           </ModalFooter>
         </ModalBody>

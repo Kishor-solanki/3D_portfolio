@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
   ReactNode,
@@ -43,21 +44,25 @@ export function Modal({ children }: { children: ReactNode }) {
 export const ModalTrigger = ({
   children,
   className,
+  asChild = false,
 }: {
   children: ReactNode;
   className?: string;
+  asChild?: boolean;
 }) => {
   const { setOpen } = useModal();
+  const Comp = asChild ? Slot : "button";
   return (
-    <button
+    <Comp
       className={cn(
-        "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
+        !asChild &&
+          "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
         className
       )}
       onClick={() => setOpen(true)}
     >
       {children}
-    </button>
+    </Comp>
   );
 };
 
