@@ -1,6 +1,7 @@
 # 🚀 3D Portfolio
 
 A jaw-dropping developer portfolio packed with interactive 3D animations, buttery smooth transitions, and a space-themed aesthetic. Not your average portfolio template! This one has a fully interactive 3D keyboard where each keycap is a skill.
+live demo https://3-d-portfolio-kishor.vercel.app/
 
 ## ✨ Features
 
@@ -133,6 +134,4 @@ If you'd like to contribute or suggest improvements, feel free to open an issue 
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-If you use this portfolio, a credit or link back to the [original repo](https://github.com/Naresh-Khatri/3d-portfolio) would be much appreciated ❤️
+https://3-d-portfolio-kishor.vercel.app/
