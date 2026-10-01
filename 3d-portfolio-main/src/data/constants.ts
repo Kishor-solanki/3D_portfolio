@@ -36,6 +36,9 @@ export enum SkillNames {
   TURF = "turf",
   COMPUTER_NETWORKS = "computer-networks",
   COMMUNICATION = "communication",
+  SQL = "sql",
+  MYSQL = "mysql",
+  RECHARTS = "recharts",
 }
 export type Skill = {
   id: number;
@@ -356,6 +359,33 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#7c3aed",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg",
   },
+  [SkillNames.SQL]: {
+    id: 37,
+    name: "sql",
+    label: "SQL",
+    shortDescription:
+      "Structured query language for relational database operations and queries.",
+    color: "#2b6fcf",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  [SkillNames.MYSQL]: {
+    id: 38,
+    name: "mysql",
+    label: "MySQL",
+    shortDescription:
+      "Popular open-source relational database used across web applications.",
+    color: "#f29111",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  [SkillNames.RECHARTS]: {
+    id: 39,
+    name: "recharts",
+    label: "Recharts",
+    shortDescription:
+      "Declarative React charting library I use to turn data into clear, interactive dashboards.",
+    color: "#22d3ee",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/recharts.svg",
+  },
 };
 
 export type Experience = {
@@ -371,52 +401,53 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "2021",
-    endDate: "2025",
-    title: "B.Tech, Electronics and Communication Engineering",
-    company: "Arya College of Engineering and IT",
+    startDate: "16 Jun 2026",
+    endDate: "30 Jul 2026",
+    title: "Data Analytics Intern (Remote)",
+    company: "Codec Technologies",
     description: [
-      "Final-year ECE student with a CGPA of 8.0, building a strong foundation in core engineering subjects along with programming and problem solving.",
-      "Actively practicing Data Structures and Algorithms (DSA) to improve logical thinking and coding efficiency.",
-      "Developing projects in web development, real-time systems, AI-integrated applications, and machine learning to apply concepts beyond the classroom.",
-      "Proficient in modern web technologies including React, Next.js, TypeScript, and geospatial tools like MapTiler and MapLibre.",
+      "Completed a remote data analytics internship, working with Excel, SQL, and Python.",
+    ],
+    skills: [
+      SkillNames.PYTHON,
+      SkillNames.SQL,
+      SkillNames.MYSQL,
+      SkillNames.RECHARTS,
+    ],
+  },
+  {
+    id: 2,
+    startDate: "2024",
+    endDate: "2025",
+    title: "Academic Excellence Recognition",
+    company: "Scintillation 2024-25 · Arya College of Engineering and IT",
+    description: [
+      "Recognized for academic and technical excellence at Scintillation 2024-25, Arya College of Engineering and IT.",
     ],
     skills: [
       SkillNames.C,
       SkillNames.CPP,
       SkillNames.PYTHON,
       SkillNames.JS,
-      SkillNames.TS,
-      SkillNames.HTML,
-      SkillNames.CSS,
-      SkillNames.REACT,
-      SkillNames.NEXTJS,
-      SkillNames.TAILWIND,
-      SkillNames.POSTGRES,
+      SkillNames.SQL,
       SkillNames.DBMS,
-      SkillNames.MAPLIBRE,
-      SkillNames.MAPTILER,
-      SkillNames.OPENSTREETMAP,
-      SkillNames.OVERPASS,
-      SkillNames.TURF,
-      SkillNames.COMPUTER_NETWORKS,
-      SkillNames.COMMUNICATION,
-      SkillNames.GIT,
-      SkillNames.GITHUB,
     ],
   },
   {
-    id: 2,
+    id: 3,
     startDate: "2025",
     endDate: "2025",
-    title: "UEM Hackathon Participant",
-    company: "UEM Hackathon",
+    title: "National-Level Hackathon Participant",
+    company: "Hackground India 2K25 · UEM Hackathon Jaipur",
     description: [
-      "Participated in a team-based hackathon competition focused on solving real-world problems.",
-      "Worked under time constraints to design and implement a functional solution.",
-      "Collaborated closely with teammates, contributing to planning, development, and presentation.",
+      "Participated in Hackground India 2K25 and UEM Hackathon Jaipur, national-level hackathon competitions demonstrating quick learning and teamwork under time constraints.",
+      "Led frontend design for a 5-member team at UEM Hackathon Jaipur, prototyping a solution under time constraints.",
     ],
     skills: [
+      SkillNames.REACT,
+      SkillNames.NODEJS,
+      SkillNames.EXPRESS,
+      SkillNames.MONGODB,
       SkillNames.JS,
       SkillNames.HTML,
       SkillNames.CSS,
@@ -424,17 +455,71 @@ export const EXPERIENCE: Experience[] = [
       SkillNames.GITHUB,
     ],
   },
+];
+
+export type Education = {
+  id: number;
+  startDate: string;
+  endDate: string;
+  degree: string;
+  institution: string;
+  grade: string;
+  coursework?: string;
+};
+
+export const EDUCATION: Education[] = [
+  {
+    id: 1,
+    startDate: "Aug 2023",
+    endDate: "Aug 2027",
+    degree:
+      "Bachelor of Technology, Electronics and Communication Engineering",
+    institution: "Arya College of Engineering and IT, Jaipur, Rajasthan",
+    grade: "CGPA: 8.0/10.0",
+    coursework:
+      "Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, Software Engineering Principles",
+  },
+  {
+    id: 2,
+    startDate: "2023",
+    endDate: "2023",
+    degree: "Higher Secondary (12th) — RBSE",
+    institution: "Govt. Sr. Sec. School, Jalor, Rajasthan",
+    grade: "71%",
+  },
   {
     id: 3,
-    startDate: "2025",
-    endDate: "2025",
+    startDate: "2021",
+    endDate: "2021",
+    degree: "Secondary (10th) — RBSE",
+    institution: "Govt. Sr. Sec. School, Kalandri, Rajasthan",
+    grade: "89%",
+  },
+];
+
+export type Certification = {
+  id: number;
+  date: string;
+  title: string;
+  issuer: string;
+  description: string;
+};
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: 1,
+    date: "June 2025",
     title: "TCS iON Career Edge – Young Professional",
-    company: "TCS iON",
-    description: [
-      "Completed professional development training covering professional communication, interview preparation, IT fundamentals, AI awareness, and professional skills.",
-      "Certified in June 2025 to strengthen workplace readiness and soft skills.",
-    ],
-    skills: [],
+    issuer: "TCS iON",
+    description:
+      "Professional training in communication, interviews, and AI fundamentals.",
+  },
+  {
+    id: 2,
+    date: "Aug 2025",
+    title: "Natural Language Processing for Developers",
+    issuer: "Infosys Springboard",
+    description: "Hands-on training in NLP and text processing.",
   },
 ];
 

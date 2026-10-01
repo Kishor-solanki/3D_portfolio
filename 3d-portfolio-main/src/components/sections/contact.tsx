@@ -25,15 +25,29 @@ const ContactSection = () => {
           <CardHeader>
             <CardTitle className="text-4xl">Contact Form</CardTitle>
             <CardDescription>
-              Please contact me directly at{" "}
+              Send me a message and it will come straight to my WhatsApp. You can
+              also email me at{" "}
               <a
                 target="_blank"
                 href={`mailto:${config.email}`}
                 className="text-gray-200 cursor-can-hover rounded-lg"
               >
                 {config.email.replace(/@/g, "(at)")}
-              </a>{" "}
-              or drop your info here.
+              </a>
+              .
+              <span className="mt-2 flex flex-col gap-1.5 text-sm text-muted-foreground">
+                <span>📍 {config.location}</span>
+                <span>
+                  📞{" "}
+                  <a
+                    href={`https://wa.me/${config.phone.replace(/\D/g, "")}`}
+                    target="_blank"
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {config.phone}
+                  </a>
+                </span>
+              </span>
             </CardDescription>
           </CardHeader>
           <CardContent>

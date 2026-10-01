@@ -65,7 +65,7 @@ const FeaturedProjectCard = ({ project }: { project: Project }) => {
               src={project.src}
               alt={`${project.title} preview`}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-contain group-hover:scale-105 transition-transform duration-500 bg-slate-200 dark:bg-zinc-900"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
@@ -78,10 +78,10 @@ const FeaturedProjectCard = ({ project }: { project: Project }) => {
             {project.title}
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
-            A real-time train tracking and journey intelligence platform
-            providing live train status, route visualization, ETA and delay
-            information, journey analytics, and weather data with interactive
-            maps and geospatial context.
+            A production-style telemedicine platform built with React.js,
+            Node.js, Express.js, and MongoDB, supporting online doctor
+            consultations, automated appointment scheduling, and patient record
+            management end-to-end.
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
             {project.skills.frontend.slice(0, 4).map((skill) => (
@@ -129,7 +129,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           src={project.src}
           alt={`${project.title} project thumbnail`}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-contain group-hover:scale-105 transition-transform duration-500 bg-slate-200 dark:bg-zinc-900"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
         <div className="absolute bottom-3 left-3 z-10">

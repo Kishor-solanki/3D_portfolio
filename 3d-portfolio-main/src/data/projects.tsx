@@ -306,35 +306,30 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "railgaadi",
+    id: "telemedicine",
     category: "Web Development",
-    title: "RailGaadi — Real-Time Train Tracking & Journey Intelligence",
-    src: "/assets/projects-screenshots/railgaadi.svg",
-    screenshots: ["railgaadi.svg"],
+    title: "Full-Stack Developer — Telemedicine Application",
+    src: "/assets/projects-screenshots/telemedicine.svg",
+    screenshots: ["telemedicine.svg"],
     featured: true,
     features: [
-      "Live train status and location tracking",
-      "Train route visualization on interactive maps",
-      "ETA and delay information in real-time",
-      "Journey analytics and geospatial context",
-      "Weather information along the route",
-      "API/service/provider architecture with caching",
+      "Automated scheduling that reduces manual appointment coordination",
+      "Online doctor consultations and patient record management end-to-end",
+      "RESTful APIs and MongoDB schema for patient/doctor data, appointment logic, and real-time availability filters",
+      "Real-time chat and video consultation modules across patient/doctor dashboards",
+      "Lazy-loaded appointment form improving load performance by 50%",
     ],
     skills: {
       frontend: [
         PROJECT_SKILLS.react,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.mapLibre,
-        PROJECT_SKILLS.mapTiler,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.css,
+        PROJECT_SKILLS.html,
       ],
       backend: [
-        PROJECT_SKILLS.railRadar,
-        PROJECT_SKILLS.openWeather,
-        PROJECT_SKILLS.openTopography,
-        PROJECT_SKILLS.overpass,
-        PROJECT_SKILLS.turf,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
       ],
     },
     live: "#",
@@ -342,51 +337,11 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            A real-time train tracking and journey intelligence platform that
-            provides live train status, route visualization, ETA and delay
-            information, journey analytics, and weather data with interactive
-            maps and geospatial context.
-          </TypographyP>
-          <div className="mt-4 mb-4">
-            <TypographyH3 className="text-lg mb-2">Key Features</TypographyH3>
-            <ul className="list-disc list-outside ml-4 space-y-1 text-sm text-muted-foreground">
-              {this.features?.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
-          </div>
-          <ProjectsLinks live={this.live} repo={undefined} />
-          <SlideShow images={[`${BASE_PATH}/railgaadi.svg`]} />
-        </div>
-      );
-    },
-  },
-  {
-    id: "telemedicine",
-    category: "Healthcare / AI",
-    title: "AI-Integrated Telemedicine Platform — SIH Hackathon",
-    src: "/assets/projects-screenshots/telemedicine.svg",
-    screenshots: ["telemedicine.svg"],
-    features: [
-      "AI-assisted healthcare functionality",
-      "Connect patients and doctors online",
-      "Healthcare-related information and resources",
-      "Online consultation support",
-      "Hackathon development experience",
-    ],
-    skills: {
-      frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
-      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.ai],
-    },
-    live: "#",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            A healthcare platform designed to connect patients and doctors and
-            provide healthcare-related information and online consultation
-            support, featuring AI-assisted healthcare functionality developed
-            during the SIH Hackathon.
+            A production-style telemedicine platform built with React.js,
+            Node.js, Express.js, and MongoDB, supporting online doctor
+            consultations and patient record management end-to-end while
+            reducing manual appointment coordination through automated
+            scheduling.
           </TypographyP>
           <div className="mt-4 mb-4">
             <TypographyH3 className="text-lg mb-2">Key Features</TypographyH3>
@@ -406,8 +361,8 @@ const projects: Project[] = [
     id: "personal-portfolio",
     category: "Web Development",
     title: "Personal Developer Portfolio",
-    src: "/assets/projects-screenshots/portfolio-thumbnail.svg",
-    screenshots: ["portfolio-thumbnail.svg"],
+    src: "/portfolio.png",
+    screenshots: ["portfolio.png"],
     features: [
       "About me section",
       "Skills showcase",

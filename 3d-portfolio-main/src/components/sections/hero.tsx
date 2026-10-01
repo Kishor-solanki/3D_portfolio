@@ -76,7 +76,7 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    Final-Year B.Tech Student | Aspiring Software Developer
+                    Frontend Developer | React • Next.js • TypeScript
                   </p>
                 </BlurIn>
               </div>
